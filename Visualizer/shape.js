@@ -82,7 +82,13 @@ class Shape {
 
         // draw polygon
         curveTightness(this.organicConstant);
-        fill(this.color);
+        
+        // this.color = (200,200,200); 
+        try {
+            fill(this.color);
+        } 
+        catch(err) {}
+        
         beginShape();
         for (let i = 0; i < this.sides; i++){
             curveVertex(this.nodeX[i], this.nodeY[i]);
